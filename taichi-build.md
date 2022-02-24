@@ -16,18 +16,19 @@ cond activate ti
 pip install -r requirements_dev.txt
 ```
 - llvm (only 10.0), cannot install by homebrew, 
-- clang (>11, on macos)
+- clang (>11 <12, on macos)
+- xcode commandline
 ```
-brew install llvm@12
-brew uninstall --ignore-dependencies python@3.9
-
+brew install llvm@11
+xcode-select --install
 ```
 
 ## Build
 
 ```
-mkdir build; cd build
-cmake -DCMAKE_CXX_COMPILER=/usr/local/opt/llvm@12/bin/clang ..
-make -j 32
-
+py
 ```
+
+## Reference
+
+1. https://docs.taichi.graphics/lang/articles/contribution/dev_install
