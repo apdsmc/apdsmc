@@ -26,7 +26,7 @@ xcode-select --install
 ## Build
 
 ```
-py
+python setup.py develop --user
 ```
 
 ## Reference
